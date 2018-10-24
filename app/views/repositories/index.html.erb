@@ -1,6 +1,9 @@
 <div class = "container">
   <h1>Repos</h1>
   <!-- List repositories and display username here! -->
+  <% @repo_data.each do |repo| %>
+
+  <% end %>
   <%= @user_data["login"] %>
   
   <%= form_tag("/repositories/create", method: "post") do %>
