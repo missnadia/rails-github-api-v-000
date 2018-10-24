@@ -1,11 +1,10 @@
 class RepositoriesController < ApplicationController
   def index
-    resp = Faraday.get("https://api.github.com/user") do |req|
-
+    Faraday.get("https://api.github.com/user") do |req|
+      req.headers['Accept'] = 'application/json'
     end
   end
 
   def create
-    redirect_to '/'
   end
 end
