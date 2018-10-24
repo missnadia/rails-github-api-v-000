@@ -19,6 +19,6 @@ class RepositoriesController < ApplicationController
       req.headers['Authorization'] = 'token ' + session[:token]
       req.headers['Accept'] = 'application/json'
     end
-    redirect_to '/'
+    redirect_to root_path
   end
 end
